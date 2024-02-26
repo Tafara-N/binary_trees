@@ -32,7 +32,7 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 - Don’t forget to push your header file
 - All your header files should be include guarded
 
-##More Info  
+## More Info  
 ## Data structures  
 Please use the following data structures and types for binary trees. Don’t forget to include them in your header file.
 
