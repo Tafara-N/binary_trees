@@ -1,4 +1,5 @@
-# Resources  
+# Resources
+
 ## Read or watch:
 - [Binary tree](https://intranet.alxswe.com/rltoken/1F2x42-8vUbOmU4L1C1KMg) (*note the first line: `Not to be confused with B-tree`.*)
 - [Data Structure and Algorithms - Tree](https://intranet.alxswe.com/rltoken/QmcTMCkQyrgMjrqoWxYdhw)
@@ -6,10 +7,10 @@
 - [Binary Search Tree](https://intranet.alxswe.com/rltoken/qO5dBlMnYJzbaWG3xVpcnQ)
 - [Data structures: Binary Tree](https://intranet.alxswe.com/rltoken/BeyJ2gjlE7_djwRiDyeHig)
 
-## Learning Objectives  
+## Learning Objectives
 At the end of this project, you are expected to be able to [explain to anyone](https://intranet.alxswe.com/rltoken/rDjGcLNoVZsZG1Br0UbX6A), **without the help of Google:**
 
-## General  
+## General
 - What is a binary tree
 - What is the difference between a binary tree and a Binary Search Tree
 - What is the possible gain in terms of time complexity compared to linked lists
@@ -17,7 +18,7 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 - What are the different traversal methods to go through a binary tree
 - What is a complete, a full, a perfect, a balanced binary tree
 
-## Requirements  
+## Requirements
 ### General
 - Allowed editors: `vi`, `vim`, `emacs`
 - All your files will be compiled on Ubuntu 20.04 LTS using `gcc`, using the options `-Wall -Werror -Wextra -pedantic -std=gnu89`
@@ -32,13 +33,15 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 - Don’t forget to push your header file
 - All your header files should be include guarded
 
-## More Info  
-## Data structures  
+## More Info
+
+## Data structures
+
 Please use the following data structures and types for binary trees. Don’t forget to include them in your header file.
 
 ### Basic Binary Tree
 
-```
+```c
 /**
  * struct binary_tree_s - Binary tree node
  *
@@ -60,25 +63,25 @@ typedef struct binary_tree_s binary_tree_t;
 
 ### Binary Search Tree
 
-```
+```c
 typedef struct binary_tree_s bst_t;
 ```
 
 ### AVL Tree
 
-```
+```c
 typedef struct binary_tree_s avl_t;
 ```
 
 ### Max Binary Heap
 
-```
+```c
 typedef struct binary_tree_s heap_t;
 ```
 
 **Note:** For tasks 0 to 23 (included), you have to deal with simple binary trees. They are not BSTs, thus they don’t follow any kind of rule.
 
-## Print function  
+## Print function
 To match the examples in the tasks, you are given [this function](https://github.com/alx-tools/0x1C.c)
 
 This function is used only for visualization purposes. You don’t have to push it to your repo. It may not be used during the correction
@@ -195,7 +198,7 @@ Write a function that inserts a node as the right-child of another node
 - If `parent` already has a right-child, the new node must take its place, and the old right-child must be set as the right-child of the new node.
 
 ```shell
-alex@/tmp/binary_trees$ cat 2-main.c 
+alex@/tmp/binary_trees$ cat 2-main.c
 #include <stdlib.h>
 #include <stdio.h>
 #include "binary_trees.h"
@@ -220,7 +223,7 @@ int main(void)
     return (0);
 }
 alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 2-main.c 2-binary_tree_insert_right.c 0-binary_tree_node.c -o 2-right
-alex@/tmp/binary_trees$ ./2-right 
+alex@/tmp/binary_trees$ ./2-right
   .--(098)--.
 (012)     (402)
 
@@ -243,7 +246,7 @@ Write a function that deletes an entire binary tree
 - If `tree` is `NULL`, do nothing
 
 ```shell
-alex@/tmp/binary_trees$ cat 3-main.c 
+alex@/tmp/binary_trees$ cat 3-main.c
 #include <stdlib.h>
 #include <stdio.h>
 #include "binary_trees.h"
@@ -272,17 +275,17 @@ alex@/tmp/binary_trees$ valgrind ./3-del
 ==13264== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
 ==13264== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
 ==13264== Command: ./3-del
-==13264== 
+==13264==
   .-------(098)--.
 (012)--.       (128)--.
      (054)          (402)
-==13264== 
+==13264==
 ==13264== HEAP SUMMARY:
 ==13264==     in use at exit: 0 bytes in 0 blocks
 ==13264==   total heap usage: 9 allocs, 9 frees, 949 bytes allocated
-==13264== 
+==13264==
 ==13264== All heap blocks were freed -- no leaks are possible
-==13264== 
+==13264==
 ==13264== For counts of detected and suppressed errors, rerun with: -v
 ==13264== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 alex@/tmp/binary_trees$
@@ -302,7 +305,7 @@ Write a function that checks if a node is a leaf
 - If `node` is `NULL`, return `0`
 
 ```shell
-alex@/tmp/binary_trees$ cat 4-main.c 
+alex@/tmp/binary_trees$ cat 4-main.c
 #include <stdlib.h>
 #include <stdio.h>
 #include "binary_trees.h"
@@ -333,7 +336,7 @@ int main(void)
     return (0);
 }
 alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 4-binary_tree_is_leaf.c 4-main.c 0-binary_tree_node.c 2-binary_tree_insert_right.c -o 4-leaf
-alex@/tmp/binary_trees$ ./4-leaf 
+alex@/tmp/binary_trees$ ./4-leaf
   .-------(098)--.
 (012)--.       (128)--.
      (054)          (402)
@@ -357,7 +360,7 @@ Write a function that checks if a given node is a root
 - If `node` is `NULL`, return `0`
 
 ```shell
-alex@/tmp/binary_trees$ cat 5-main.c 
+alex@/tmp/binary_trees$ cat 5-main.c
 #include <stdlib.h>
 #include <stdio.h>
 #include "binary_trees.h"
@@ -388,7 +391,7 @@ int main(void)
     return (0);
 }
 alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 5-binary_tree_is_root.c 5-main.c 0-binary_tree_node.c 2-binary_tree_insert_right.c -o 5-root
-alex@/tmp/binary_trees$ ./5-root 
+alex@/tmp/binary_trees$ ./5-root
   .-------(098)--.
 (012)--.       (128)--.
      (054)          (402)
@@ -606,7 +609,7 @@ Write a function that measures the height of a binary tree
 - If `tree` is `NULL`, your function must return `0`
 
 ```shell
-alex@/tmp/binary_trees$ cat 9-main.c 
+alex@/tmp/binary_trees$ cat 9-main.c
 #include <stdlib.h>
 #include <stdio.h>
 #include "binary_trees.h"
@@ -637,7 +640,7 @@ int main(void)
     return (0);
 }
 alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 9-binary_tree_height.c 9-main.c 0-binary_tree_node.c 2-binary_tree_insert_right.c -o 9-height
-alex@/tmp/binary_trees$ ./9-height 
+alex@/tmp/binary_trees$ ./9-height
   .-------(098)--.
 (012)--.       (128)--.
      (054)          (402)
@@ -660,7 +663,7 @@ Write a function that measures the depth of a node in a binary tree
 - If `tree` is `NULL`, your function must return `0`
 
 ```shell
-alex@/tmp/binary_trees$ cat 10-main.c 
+alex@/tmp/binary_trees$ cat 10-main.c
 #include <stdlib.h>
 #include <stdio.h>
 #include "binary_trees.h"
@@ -691,7 +694,7 @@ int main(void)
     return (0);
 }
 alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 10-binary_tree_depth.c 10-main.c 0-binary_tree_node.c 2-binary_tree_insert_right.c -o 10-depth
-alex@/tmp/binary_trees$ ./10-depth 
+alex@/tmp/binary_trees$ ./10-depth
   .-------(098)--.
 (012)--.       (128)--.
      (054)          (402)
@@ -714,7 +717,7 @@ Write a function that measures the size of a binary tree
 - If `tree` is `NULL`, the function must return `0`
 
 ```shell
-alex@/tmp/binary_trees$ cat 11-main.c 
+alex@/tmp/binary_trees$ cat 11-main.c
 #include <stdlib.h>
 #include <stdio.h>
 #include "binary_trees.h"
@@ -745,7 +748,7 @@ int main(void)
     return (0);
 }
 alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 11-binary_tree_size.c 11-main.c 0-binary_tree_node.c 2-binary_tree_insert_right.c -o 11-size
-alex@/tmp/binary_trees$ ./11-size 
+alex@/tmp/binary_trees$ ./11-size
   .-------(098)--.
 (012)--.       (128)--.
      (054)          (402)
@@ -769,7 +772,7 @@ Write a function that counts the leaves in a binary tree
 - A `NULL` pointer is not a leaf
 
 ```shell
-alex@/tmp/binary_trees$ cat 12-main.c 
+alex@/tmp/binary_trees$ cat 12-main.c
 #include <stdlib.h>
 #include <stdio.h>
 #include "binary_trees.h"
@@ -800,7 +803,7 @@ int main(void)
     return (0);
 }
 alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 12-binary_tree_leaves.c 12-main.c 0-binary_tree_node.c 2-binary_tree_insert_right.c -o 12-leaves
-alex@/tmp/binary_trees$ ./12-leaves 
+alex@/tmp/binary_trees$ ./12-leaves
   .-------(098)--.
 (012)--.       (128)--.
      (054)          (402)
@@ -878,7 +881,7 @@ Write a function that measures the balance factor of a binary tree
 - If `tree` is `NULL`, return `0`
 
 ```shell
-alex@/tmp/binary_trees$ cat 14-main.c 
+alex@/tmp/binary_trees$ cat 14-main.c
 #include <stdlib.h>
 #include <stdio.h>
 #include "binary_trees.h"
@@ -1032,7 +1035,7 @@ int main(void)
     return (0);
 }
 alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 16-binary_tree_is_perfect.c 16-main.c 0-binary_tree_node.c 2-binary_tree_insert_right.c -o 16-perfect
-alex@/tmp/binary_trees$ ./16-perfect 
+alex@/tmp/binary_trees$ ./16-perfect
        .-------(098)-------.
   .--(012)--.         .--(128)--.
 (010)     (054)     (010)     (402)
@@ -1309,7 +1312,7 @@ alex@/tmp/binary_trees$ valgrind ./101-lvl
 ==23445== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
 ==23445== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
 ==23445== Command: ./101-lvl
-==23445== 
+==23445==
        .-------(098)-------.
   .--(012)--.         .--(402)--.
 (006)     (056)     (256)     (512)
@@ -1320,13 +1323,13 @@ alex@/tmp/binary_trees$ valgrind ./101-lvl
 56
 256
 512
-==23445== 
+==23445==
 ==23445== HEAP SUMMARY:
 ==23445==     in use at exit: 0 bytes in 0 blocks
 ==23445==   total heap usage: 19 allocs, 19 frees, 1,197 bytes allocated
-==23445== 
+==23445==
 ==23445== All heap blocks were freed -- no leaks are possible
-==23445== 
+==23445==
 ==23445== For counts of detected and suppressed errors, rerun with: -v
 ==23445== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 alex@/tmp/binary_trees$
@@ -1699,7 +1702,7 @@ Write a function that builds a Binary Search Tree from an array
 Your files `111-bst_insert.c` and `0-binary_tree_node.c` will be compiled during the correction
 
 ```shell
-alex@/tmp/binary_trees$ cat 112-main.c 
+alex@/tmp/binary_trees$ cat 112-main.c
 #include <stdlib.h>
 #include "binary_trees.h"
 
@@ -1781,7 +1784,7 @@ int main(void)
     return (0);
 }
 alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 113-bst_search.c 113-main.c 112-array_to_bst.c 111-bst_insert.c 0-binary_tree_node.c -o 113-bst_search
-alex@/tmp/binary_trees$ ./113-bst_search 
+alex@/tmp/binary_trees$ ./113-bst_search
                                      .------------(079)-------.
                  .-----------------(047)-------.         .--(087)--.
        .-------(021)-------.              .--(068)     (084)     (091)-------.
@@ -1854,7 +1857,7 @@ alex@/tmp/binary_trees$ valgrind ./114-bst_rm
 ==14720== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
 ==14720== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
 ==14720== Command: ./114-bst_rm
-==14720== 
+==14720==
                                      .------------(079)-------.
                  .-----------------(047)-------.         .--(087)--.
        .-------(021)-------.              .--(068)     (084)     (091)-------.
@@ -1878,13 +1881,13 @@ Removed 68...
        .-------(022)--.            (062)          (091)-------.
   .--(002)--.       (032)--.                             .--(098)
 (001)     (020)          (034)                         (095)
-==14720== 
+==14720==
 ==14720== HEAP SUMMARY:
 ==14720==     in use at exit: 0 bytes in 0 blocks
 ==14720==   total heap usage: 40 allocs, 40 frees, 5,772 bytes allocated
-==14720== 
+==14720==
 ==14720== All heap blocks were freed -- no leaks are possible
-==14720== 
+==14720==
 ==14720== For counts of detected and suppressed errors, rerun with: -v
 ==14720== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 alex@/tmp/binary_trees$
@@ -2148,7 +2151,7 @@ int main(void)
     return (0);
 }
 alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 122-array_to_avl.c 122-main.c 121-avl_insert.c 0-binary_tree_node.c 14-binary_tree_balance.c 103-binary_tree_rotate_left.c 104-binary_tree_rotate_right.c -o 122-avl_array
-alex@/tmp/binary_trees$ ./122-avl_array 
+alex@/tmp/binary_trees$ ./122-avl_array
                  .-----------------(047)-----------------.
        .-------(021)-------.                   .-------(084)-------.
   .--(002)--.         .--(032)--.         .--(068)--.         .--(091)-------.
@@ -2228,7 +2231,7 @@ alex@/tmp/binary_trees$ valgrind ./123-avl_rm
 ==15646== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
 ==15646== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
 ==15646== Command: ./123-avl_rm
-==15646== 
+==15646==
                  .-----------------(047)-----------------.
        .-------(021)-------.                   .-------(084)-------.
   .--(002)--.         .--(032)--.         .--(068)--.         .--(091)-------.
@@ -2260,13 +2263,13 @@ Removed 22...
   .--(002)-------.              .-------(091)-------.
 (001)       .--(021)       .--(084)--.         .--(098)
           (020)          (068)     (087)     (095)
-==15646== 
+==15646==
 ==15646== HEAP SUMMARY:
 ==15646==     in use at exit: 0 bytes in 0 blocks
 ==15646==   total heap usage: 48 allocs, 48 frees, 7,350 bytes allocated
-==15646== 
+==15646==
 ==15646== All heap blocks were freed -- no leaks are possible
-==15646== 
+==15646==
 ==15646== For counts of detected and suppressed errors, rerun with: -v
 ==15646== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 alex@/tmp/binary_trees$
@@ -2657,7 +2660,7 @@ alex@/tmp/binary_trees$ valgrind ./133-heap_extract
 ==29133== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
 ==29133== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
 ==29133== Command: ./133-heap_extract
-==29133== 
+==29133==
                       .-----------------(098)-----------------.
             .-------(095)-------.                   .-------(091)-------.
        .--(084)--.         .--(079)--.         .--(087)--.         .--(062)--.
@@ -2678,13 +2681,13 @@ Extracted: 91
        .-------(084)-------.                   .-------(068)--.
   .--(047)--.         .--(079)--.         .--(022)--.       (062)
 (032)     (034)     (002)     (020)     (001)     (021)
-==29133== 
+==29133==
 ==29133== HEAP SUMMARY:
 ==29133==     in use at exit: 0 bytes in 0 blocks
 ==29133==   total heap usage: 213 allocs, 213 frees, 9,063 bytes allocated
-==29133== 
+==29133==
 ==29133== All heap blocks were freed -- no leaks are possible
-==29133== 
+==29133==
 ==29133== For counts of detected and suppressed errors, rerun with: -v
 ==29133== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 alex@/tmp/binary_trees$
@@ -2707,7 +2710,7 @@ Write a function that converts a Binary Max Heap to a sorted array of integers
 Your file `133-heap_extract.c` will be compile during the correction
 
 ```shell
-alex@/tmp/binary_trees$ cat 134-main.c 
+alex@/tmp/binary_trees$ cat 134-main.c
 #include <stdlib.h>
 #include <stdio.h>
 #include "binary_trees.h"
@@ -2765,7 +2768,7 @@ alex@/tmp/binary_trees$ valgrind ./134-heap_sort
 ==46529== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
 ==46529== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
 ==46529== Command: ./134-heap_sort
-==46529== 
+==46529==
 79, 47, 68, 87, 84, 91, 21, 32, 34, 2, 20, 22, 98, 1, 62, 95
                       .-----------------(098)-----------------.
             .-------(095)-------.                   .-------(091)-------.
@@ -2773,13 +2776,13 @@ alex@/tmp/binary_trees$ valgrind ./134-heap_sort
   .--(047)     (034)     (002)     (020)     (022)     (068)     (001)     (021)
 (032)
 98, 95, 91, 87, 84, 79, 68, 62, 47, 34, 32, 22, 21, 20, 2, 1
-==46529== 
+==46529==
 ==46529== HEAP SUMMARY:
 ==46529==     in use at exit: 0 bytes in 0 blocks
 ==46529==   total heap usage: 301 allocs, 301 frees, 8,323 bytes allocated
-==46529== 
+==46529==
 ==46529== All heap blocks were freed -- no leaks are possible
-==46529== 
+==46529==
 ==46529== For counts of detected and suppressed errors, rerun with: -v
 ==46529== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 alex@/tmp/binary_trees$
@@ -2800,4 +2803,3 @@ What are the average time complexities of those operations on a Binary Heap (one
 **Repo:**
 - GitHub repository: `binary_trees`
 - File: `135-O`
-
