@@ -1921,6 +1921,7 @@ Write a function that checks if a binary tree is a valid [AVL Tree](https://en.w
 - If `tree` is `NULL`, return `0`
 
 Properties of an AVL Tree:
+
 - An AVL Tree is a BST
 - The difference between heights of left and right subtrees cannot be more than one
 - The left and right subtrees must also be AVL trees
@@ -2367,7 +2368,7 @@ What are the average time complexities of those operations on an AVL Tree (one a
 
 ### 36. Is Binary heap
 
-Write a function that checks if a binary tree is a valid [Max Binary Heap](https://intranet.alxswe.com/rltoken/TU_7dyDvU6XqO_T0elQk4Q)
+Write a function that checks if a binary tree is a valid [Max Binary Heap](https://en.wikipedia.org/wiki/Binary_heap)
 
 - Prototype: `int binary_tree_is_heap(const binary_tree_t *tree);`
 - Where `tree` is a pointer to the root node of the tree to check
