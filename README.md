@@ -1913,7 +1913,7 @@ What are the average time complexities of those operations on a Binary Search Tr
 
 ### 30. Is AVL
 
-Write a function that checks if a binary tree is a valid AVL Tree
+Write a function that checks if a binary tree is a valid [AVL Tree](https://en.wikipedia.org/wiki/AVL_tree)
 
 - Prototype: `int binary_tree_is_avl(const binary_tree_t *tree);`
 - Where `tree` is a pointer to the root node of the tree to check
