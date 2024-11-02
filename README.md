@@ -1559,6 +1559,7 @@ Write a function that checks if a binary tree is a valid [Binary Search Tree](ht
 - If `tree` is `NULL`, return `0`
 
 Properties of a Binary Search Tree:
+
 - The left subtree of a node contains only nodes with values less than the node’s value
 - The right subtree of a node contains only nodes with values greater than the node’s value
 - The left and right subtree each must also be a binary search tree
