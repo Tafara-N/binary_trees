@@ -2376,6 +2376,7 @@ Write a function that checks if a binary tree is a valid [Max Binary Heap](https
 - If `tree` is `NULL`, return `0`
 
 Properties of a Max Binary Heap:
+
 - It’s a complete tree
 - In a Max Binary Heap, the value at root must be maximum among all values present in Binary Heap
 - The last property must be recursively true for all nodes in Binary Tree
