@@ -8,7 +8,7 @@
 - [Data structures: Binary Tree](https://www.youtube.com/watch?v=H5JubkIy_p8)
 
 ## Learning Objectives
-At the end of this project, you are expected to be able to [explain to anyone](https://intranet.alxswe.com/rltoken/rDjGcLNoVZsZG1Br0UbX6A), **without the help of Google:**
+At the end of this project, you are expected to be able to [explain to anyone](https://fs.blog/feynman-learning-technique/), **without the help of Google:**
 
 ## General
 - What is a binary tree
