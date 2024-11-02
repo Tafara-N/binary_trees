@@ -1551,7 +1551,7 @@ alex@/tmp/binary_trees$
 
 ### 24. Is BST
 
-Write a function that checks if a binary tree is a valid Binary Search Tree
+Write a function that checks if a binary tree is a valid [Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree)
 
 - Prototype: `int binary_tree_is_bst(const binary_tree_t *tree);`
 - Where `tree` is a pointer to the root node of the tree to check
